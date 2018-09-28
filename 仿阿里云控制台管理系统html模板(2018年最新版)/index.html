@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>极资源-主页-仿阿里云后台模板(2018)</title>
+    <link rel="stylesheet" type="text/css" href="public/layui/css/layui.css">
+    <link href="public/css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="public/css/iconfont.css">
+    <script src="public/js/jquery-3.2.1.min.js"></script>
+    <script src="public/layui/layui.js"></script>
+    <script src="public/js/alert.js"></script>
+	<script src="public/js/echarts.min.js"></script>
+</head>
+
+<body>
+<!-- 头部导航 -->
+<div class="jzy_w_max jzy_h_50 br_12">
+    <!-- LOGO -->
+    <div class="jzy_w_50 jzy_h_50 br_12 br_11_hove lt logo">
+        <a href=""><img src="public/images/aliyun.png"></a>
+    </div>
+    <!--菜单1-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove lt top-txt">
+        <a class="cr_h_0 fs_14" href="">管理控制台</a>
+    </div>
+
+    <!--头像-->
+    <div class="jzy_w_50 jzy_h_50 br_12 br_11_hove rt top-txt logo">
+        <img class="jzy_boy_18" src="public/images/touxiang.jpg" width="36" height="36">
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_270 jzy_h_408 br_h_0 top_nav">
+            <!--头像跟用户名-->
+            <div class="jzy_w_max jzy_h_50 lt" style="margin-top: 15px"><img class="jzy_boy_18" src="public/images/touxiang.jpg" width="36" height="36"></div>
+            <div class="jzy_w_max jzy_h_30 lt" style="line-height: 30px; border-bottom: 1px solid #e2e2e2">1731223728@qq.com</div>
+            <!--用户公共操作权限-->
+            <div class="jzy_w_250 jzy_h_250 lt" style="padding: 10px">
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/jbzl.png"></p>基本资料</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/smrz.png"></p>实名认证</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/aqsz.png"></p>安全设置</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/fxgk.png"></p>风险管控</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/fwkz.png"></p>访问控制</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/api.png"></p>API接口</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/hyqy.png"></p>会员权益</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/hyjf.png"></p>会员积分</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/wjgl.png"></p>文件管理</a>
+                </div>
+            </div>
+            <!--退出登录-->
+            <div class="jzy_w_max jzy_h_42 lt br_h_9" style="background: #f5f5f6; line-height: 45px"><a href="login.html">退出管理控制台</a></div>
+        </div>
+    </div>
+
+    <!--菜单2-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove rt top-txt">
+        <a class="cr_h_0 fs_14">语言选择</a>
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_90 br_h_0 top_nav nav2">
+            <p class="p"><a href="">简体中文</a></p>
+            <p class="p"><a href="">English</a></p>
+        </div>
+    </div>
+
+    <!--菜单3-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove rt top-txt">
+        <a class="cr_h_0 fs_14">权限设置</a>
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_90 br_h_0 top_nav nav2">
+            <p class="p"><a href="">新建权限</a></p>
+            <p class="p"><a href="">角色列表</a></p>
+            <p class="p"><a href="">部门管理</a></p>
+        </div>
+    </div>
+
+</div>
+
+<!--左侧主导航-->
+<div class="jzy_w_180 lt main_height main_left nav" style="background: #333744">
+
+    <div class="nav-top">
+        <div id="mini" style="background: #4a5064; text-align: center"><img src="public/images/icon/suofang.png" width="20"></div>
+    </div>
+    <ul>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>部门架构</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="region_list.html"><span>地区管理</span></a></li>
+                <li><a href="department_list.html"><span>部门管理</span></a></li>
+                <li><a href="job_list.html"><span>岗位管理</span></a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>权限设置</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="menu_list.html"><span>权限菜单</span></a></li>
+                <li><a href="manager_list.html"><span>管理员</span></a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>系统管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="javascript:;"><span>维护公告</span></a></li>
+                <li><a href="javascript:;"><span>版本管理</span></a></li>
+                <li><a href="javascript:;"><span>日志编码</span></a></li>
+                <li><a href="javascript:;"><span>数据库</span></a></li>
+                <li><a href="javascript:;"><span>服务器</span></a></li>
+                <li><a href="javascript:;"><span>敏感词设置</span></a></li>
+                <li><a href="javascript:;"><span>IP黑名单</span></a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>日志管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="javascript:;"><span>管理员登录日志</span></a></li>
+                <li><a href="javascript:;"><span>会员登录日志</span></a></li>
+                <li><a href="javascript:;"><span>后端操作日志</span></a></li>
+                <li><a href="javascript:;"><span>前端操作日志</span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--左侧次导航-->
+<div class="jzy_w_180 lt main_height main_nav" style="background: #D9DEE4">
+    <div class="jzy_w_150 jzy_h_70 fs_13 lt" style="font-weight: bold; line-height: 70px;padding-left: 30px">三级导航</div>
+    <div class="jzy_w_180 fs_13 lt main_height2" style="background: #EAEDF1;">
+        <div class="jzy_w_130 jzy_h_40 fs_12 lt" style="line-height: 40px;padding-left: 50px"><a href="">我的工单</a></div>
+        <div class="jzy_w_130 jzy_h_40 fs_12 br_h_0 lt" style="line-height: 40px;padding-left: 50px"><a href="">我的工单</a></div>
+        <div class="jzy_w_130 jzy_h_40 fs_12 lt" style="line-height: 40px;padding-left: 50px"><a href="">我的工单</a></div>
+    </div>
+</div>
+
+<!--主内容框架-->
+<div class="main_height main_index lt" style="background: #f2f4f8;">
+    <!--4个数据统计-->
+    <div class="layui-row layui-col-space10" style="padding: 10px">
+        <div class="layui-col-md3">
+            <div class="grid-demo ">
+                <div class="layui-col-md4 grid-demo2"><img src="public/images/icon/huiyuan.png"></div>
+                <div class="layui-col-md5"><span class="t1">12398</span><br/><span class="t2">会员总数</span></div>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="grid-demo ">
+                <div class="layui-col-md4 grid-demo2"><img src="public/images/icon/huoyuedu.png"></div>
+                <div class="layui-col-md5"><span class="t1">12398</span><br/><span class="t2">活跃度</span></div>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="grid-demo ">
+                <div class="layui-col-md4 grid-demo2"><img src="public/images/icon/yichang.png"></div>
+                <div class="layui-col-md5"><span class="t1">12398</span><br/><span class="t2">异常警告</span></div>
+            </div>
+        </div>
+        <div class="layui-col-md3">
+            <div class="grid-demo ">
+                <div class="layui-col-md4 grid-demo2"><img src="public/images/icon/shouru.png"></div>
+                <div class="layui-col-md5"><span class="t1">12398</span><br/><span class="t2">今日收入</span></div>
+            </div>
+        </div>
+    </div>
+    <!--3个数据统计-->
+    <div class="layui-row layui-col-space10" style="padding: 10px">
+        <div class="layui-col-md2">
+            <div class="grid-demo grid-demo-bg1">
+                <div class="lt jzy_w_max fs_14 cr_h_7" style="border-bottom: 1px solid #e2e2e2">
+                    今周财务收支计划
+                    <img class="rt" style="margin-top: 10px" src="public/images/icon/benzhou.png">
+                </div>
+                <div class="lt jzy_w_max">
+                    <div class="lt jzy_w_max jzy_h_10 fs_13 cr_h_6">￥61746.45</div>
+                    <div class="lt jzy_w_max jzy_h_30 fs_17 cr_1" style="margin-top: 20px">+￥361746.45</div>
+                    <div class="lt jzy_w_max fs_13 cr_h_6">第1周收入</div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md2">
+            <div class="grid-demo grid-demo-bg1">
+                <div class="lt jzy_w_max fs_14 cr_h_7" style="border-bottom: 1px solid #e2e2e2">
+                    今月财务收支计划
+                    <img class="rt" style="margin-top: 10px" src="public/images/icon/jinyue.png">
+                </div>
+                <div class="lt jzy_w_max">
+                    <div class="lt jzy_w_max jzy_h_10 fs_13 cr_h_6">￥61746.45</div>
+                    <div class="lt jzy_w_max jzy_h_30 fs_17 cr_1" style="margin-top: 20px">+￥361746.45</div>
+                    <div class="lt jzy_w_max fs_13 cr_h_6">第1周收入</div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md4">
+            <div class="grid-demo grid-demo-bg1 benjidu">
+                <div class="lt jzy_w_max fs_15 cr_h_7">本季度利润</div>
+                <div>
+                    <div class="lt jzy_w_max fs_38 cr_4">￥27,294</div>
+                    <div class="lt jzy_w_max fs_13 cr_h_6">本季度比去年多收入 2593元 人民币</div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md4">
+            <div class="grid-demo grid-demo-bg1 benniandu">
+                <div class="lt jzy_w_max fs_15 cr_h_7">本年度利润</div>
+                <div>
+                    <div class="lt jzy_w_max fs_38 cr_8">￥27,294</div>
+                    <div class="lt jzy_w_max fs_13 cr_h_6">本季度比去年多收入 2593元 人民币</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--1大1小数据报表-->
+    <div class="layui-row layui-col-space10" style="padding: 10px">
+        <div class="layui-col-md8"><div class="grid-demo3"><div class="jzy_w_max jzy_h_350" id="demo-1"></div></div></div>
+        <div class="layui-col-md4"><div class="grid-demo3"><div class="jzy_w_max jzy_h_380" id="demo-2"></div></div></div>
+    </div>
+    <!---->
+</div>
+
+
+
+<script type="text/javascript" src="public/js/nav.js"></script>
+<style>
+.grid-demo2{text-align: center;}
+.grid-demo, .grid-demo3{padding: 10px;height: 63px;line-height: 43px;text-align: center;background-color: #fff;color: #333;text-align: left;font-size:16px;-ms-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);-o-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);-moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);-webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);}
+.grid-demo3 {height: 380px;}
+.grid-demo .t1{font-weight: 600}
+.grid-demo .t2{font-size: 12px; margin-top: -20px; display: block; color: #999}
+
+.grid-demo-bg1{height: 140px}
+.benjidu{
+    background: url(public/images/icon/jidu.png) no-repeat center right #fff;
+    background-position:360px center;
+}
+.benniandu{
+    background: url(public/images/icon/niandu.png) no-repeat center right #fff;
+    background-position:360px center;
+}
+
+@media screen and (max-width: 1440px) {
+    .grid-demo-bg1 img{display: none}
+}
+</style>
+
+
+<script>
+// 第一个图标
+var myChart = echarts.init(document.getElementById('demo-1'));
+var option = {
+    title : {
+        text: '某楼盘销售情况',
+        subtext: '纯属虚构'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['意向','预购','成交']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'成交',
+            type:'line',
+            smooth:true,
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data:[10, 12, 21, 54, 260, 830, 710]
+        },
+        {
+            name:'预购',
+            type:'line',
+            smooth:true,
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data:[30, 182, 434, 791, 390, 30, 10]
+        },
+        {
+            name:'意向',
+            type:'line',
+            smooth:true,
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data:[1320, 1132, 601, 234, 120, 90, 20]
+        }
+    ]
+};
+myChart.setOption(option);
+// 第二个图标
+var myChart = echarts.init(document.getElementById('demo-2'));
+var option = {
+    title : {
+        text: '收入对比',
+        subtext: '数据对比'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        x : 'center',
+        data:['上月收入','今月收入']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    polar : [
+        {
+            indicator : [
+                {text : '进攻', max  : 100},
+                {text : '防守', max  : 100},
+                {text : '体能', max  : 100},
+                {text : '速度', max  : 100},
+                {text : '力量', max  : 100},
+                {text : '技巧', max  : 100}
+            ],
+            radius : 130
+        }
+    ],
+    series : [
+        {
+            name: '数据对比',
+            type: 'radar',
+            itemStyle: {
+                normal: {
+                    areaStyle: {
+                        type: 'default'
+                    }
+                }
+            },
+            data : [
+                {
+                    value : [97, 42, 88, 94, 90, 86],
+                    name : '今月收入'
+                },
+                {
+                    value : [97, 32, 74, 95, 88, 92],
+                    name : '上月收入'
+                }
+            ]
+        }
+    ]
+};
+myChart.setOption(option);
+
+</script>
+</body>
+</html>

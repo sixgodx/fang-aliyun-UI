@@ -1,0 +1,81 @@
+﻿@charset "utf-8";
+ .top-txt{ text-align: center; line-height: 50px;border: 1px solid #2a2f32; border-bottom: 0;border-top: 0; cursor: pointer;position: relative}
+.main_height{border-top: 1px solid #2a2f32}
+.logo{ text-align: center; line-height: 50px}
+.br_11_hove:hover{background: #333}
+.top_nav{display: none; position: absolute;top: 50px;border: 1px solid #e2e2e2;right: 0;border-top: 0;border-right: 0;-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);box-shadow: 0 1px 3px rgba(0,0,0,.2);-webkit-transition: opacity .15s,visibility 0s .15s;transition: opacity .15s,visibility 0s .15s;}
+.top-txt:hover > .top_nav{display: inline-block;}
+.top_nav .p{height: 35px;line-height: 35px;}
+.top_nav .p:hover{background-color: #e2e2e2}
+.nav2{padding: 6px 0px}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar{width: 10px;background-color: #ccc;}  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track{background-color: #ccc;}  
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb{background-color: #00b38a;}   
+.layui-table-body::-webkit-scrollbar-thumb{background-color: #ccc;}  
+
+
+/* nav */
+body{overflow: hidden}
+.nav{transition: all .3s;}
+.nav a{display: block;overflow: hidden;padding-left: 25px;color: #fff;font-size: 12px;transition: all .3s;}
+.main_height{transition: all .3s;}
+.main_index{overflow: hidden; overflow-y:scroll;box-sizing: border-box;width:100%;padding-left: 360px;position: absolute;z-index: -1;transtion: all .2s;-webkit-transtion: all .2s;-moz-transtion: all .2s;}
+.main_index_hover{padding-left:51px;}
+.main_left::-webkit-scrollbar{width: 0px;}  
+.nav a span{margin-left: 30px;}
+.nav-item{position: relative; min-height: 40px; line-height: 40px;background: #42485b}
+.nav-item.nav-show{border-bottom: none;}
+.nav-item:hover{background: #00b38a;}
+.nav-item ul {display: none;background: #333744;}
+.nav-item.nav-show ul{display: block;}
+.nav-item >a:before{content: "";position: absolute;left: 0px;width: 2px;height: 46px;opacity:0;transition: all .3s;}
+.nav .nav-icon{font-size: 10px;position: absolute;margin-left:-5px;}
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after{content: "\e62b";}
+.icon_2::after{content: "\e669";}
+.icon_3::after{content: "\e61d";}
+/*---------------------*/
+.nav-more{float:right;margin-right: 20px;font-size: 12px;transition: transform .3s;}
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after{content: "\e621";}
+/*---------------------*/
+.nav-show{background: #00b38a;}
+.nav-show .nav-more{transform:rotate(90deg);}
+.nav-show,.nav-item>a:hover{color: #FFF;}
+.nav-show>a:before,.nav-item>a:hover:before{opacity:1;}
+.nav-item li:hover a{color: #FFF;}
+
+/* nav-mini */
+#mini{height: 30px; line-height: 30px}
+.nav-mini.nav{width: 51px;}
+.nav-mini.nav .nav-icon{/* margin-left:-2px; */}
+.nav-mini.nav .nav-item>a span{display: none;}
+.nav-mini.nav .nav-more{margin-right: -20px;}
+.nav-mini.nav .nav-item ul{position: absolute;top:0px;left:50px;width: 180px;z-index: 99;background:#333744;overflow: hidden;}
+.nav-mini.nav .nav-item:hover{background:#333744;}
+.nav-mini.nav .nav-item:hover .nav-item a{color:#FFF;}
+.nav-mini.nav .nav-item:hover a:before{opacity:1;}
+.nav-mini.nav .nav-item:hover ul{display: block;}
+
+
+.tabTop{padding: 10px 10px;box-shadow:2px 0px 7px #c5c5c5;margin-bottom: 9px}
+.tabTop span{font-size: 15px;height: 50px;line-height: 50px;}
+.layui-btn-group .clickTab{margin-right: 20px!important;float: right}
+.divTab{background: #efefef;position: fixed;right: -30%;top: 51px;width: 30%;z-index: 1003;box-shadow: 2px 0px 15px #5d5d5d;overflow: hidden;overflow-y: auto}
+.divTab h2{font-size: 15px;margin: 15px}
+.divTab .layui-btn+.layui-btn{margin: 0}
+
+.jzy_tab_top{height: 50px; line-height: 50px;border-bottom: 1px solid #ccc}
+.jzy_tab_top img{margin: 10px 0 0 10px}
+.jzy_tab_top .txt{margin-left: 10px;font-size: 15px;}
+.jzy_tab_top .on{height: 50px; width: 50px;border-left: 1px solid #ccc;text-align: center;font-size: 23px;color: #a3a3a3; cursor: pointer}
+.jzy_tab_top .on:hover{color: #333}
+.jzy_tab_main{width: 94%;margin: 10px 2%;background: #fff;padding: 5px;border: 1px solid #eaeaea;}
+
+.tree_left{width: 300px;float: left;background: #fff;margin: 10px;overflow: hidden;overflow-y: auto}
+.layui-tree li a i{font-size:0px}
+.layui-form .layui-tree-skin-as input[type=checkbox]{display: initial}

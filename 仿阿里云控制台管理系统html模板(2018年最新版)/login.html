@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>极资源-登录页-仿阿里云后台模板(2018)</title>
+    <link href="public/css/common.css" type="text/css" rel="stylesheet">
+    <link href="public/css/login.css" type="text/css" rel="stylesheet">
+    <script src="public/js/jquery-3.2.1.min.js"></script>
+    <script src="public/js/alert.js"></script>
+</head>
+
+<body>
+<div class="jzy_w_max jzy_h_360 br_14"></div>
+<div class="logo"></div>
+
+<section class="content_box cleafix">
+    <div class="left_area fl">
+        <div class="form_head">
+            <ul class="form_head clearfix">
+                <li class="active">密码登录</li>
+            </ul>
+            <span class="tab_active"></span>
+        </div>
+        <div class="form_body" data-view="passwordLogin">
+            <form class="active" action="index.html">
+                <div class="input_item clearfix"style="display: block;">
+                    <input type="text" id="phone" class="input input_white" placeholder="请输入常用手机号/邮箱">
+                </div>
+                <div class="input_item clearfix"style="display: block;">
+                    <input type="password" id="password" class="input input_white" placeholder="请输入密码">
+                </div>
+                <div class="input_item clearfix" style="display: block;">
+                    <div class="input_group clearfix">
+                        <input type="text" id="vif" class="input input_white verify_code_input fl" placeholder="请证明你不是机器人">
+                        <img src="public/images/create.jpg" alt="点击重试" class="yzm" width="98" height="40">
+                        <a rel="nofollow" href="javascript:;" class="reflash"></a>
+                    </div>
+                </div>
+                <div class="input_item clearfix">
+                    <a rel="nofollow" href="" class="forgot_pwd">忘记密码？</a>
+                </div>
+                <div class="input_item btn_group clearfix" style="display: block;">
+                    <input type="submit" class="btn btn_green btn_active btn_block btn_lg" value="登&nbsp;录">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="form_body"></div>
+    </div>
+    <div class="divider fl"></div>
+    <div class="right_area fl">
+        <h5>还没有帐号:</h5>
+        <a href="" class="register_now">立即注册</a>
+        <h5>使用以下帐号直接登录:</h5>
+        <ul class="vender_login clearfix">
+            <li>
+                <a rel="nofollow" href="/oauth20/auth_sinaWeiboProvider.html" title="使用新浪微博帐号登录" class="vender_icon icon_sina" target="_blank"></a>
+            </li>
+            <li>
+                <a rel="nofollow" href="/oauth20/auth_weixinProvider.html" class="vender_icon icon_wechat" title="使用微信帐号登录" target="_blank"></a>
+            </li>
+            <li>
+                <a rel="nofollow" href="/oauth20/auth_qqProvider.html" title="使用腾讯QQ帐号登录" class="vender_icon icon_tencent" target="_blank"></a>
+            </li>
+            <li>
+                <a rel="nofollow" href="/oauth20/auth_baiduProvider.html" title="使用百度帐号登录" class="vender_icon icon_baidu" target="_blank"></a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script>
+$(".btn_group .btn_lg").click(function(){  
+    var phone    = $('#phone').val();
+    var password = $('#password').val();
+    var vif      = $('#vif').val();
+
+    if (phone == '')    {popup('请输入手机号'); return false;}
+    if (password == '') {popup('请输入密码'); return false;}
+    if (vif == '')      {popup('请输入验证码'); return false;}
+});
+
+</script>
+
+</body>
+</html>

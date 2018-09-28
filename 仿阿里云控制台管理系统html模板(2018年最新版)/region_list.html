@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>极资源-地区管理-仿阿里云后台模板(2018)</title>
+    <link rel="stylesheet" type="text/css" href="public/layui/css/layui.css">
+    <link href="public/css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="public/css/iconfont.css">
+    <script src="public/js/jquery-3.2.1.min.js"></script>
+    <script src="public/layui/layui.js"></script>
+    <script src="public/js/alert.js"></script>
+	<script src="public/js/echarts.min.js"></script>
+</head>
+
+<body>
+<!-- 头部导航 -->
+<div class="jzy_w_max jzy_h_50 br_12">
+    <!-- LOGO -->
+    <div class="jzy_w_50 jzy_h_50 br_12 br_11_hove lt logo">
+        <a href=""><img src="public/images/aliyun.png"></a>
+    </div>
+    <!--菜单1-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove lt top-txt">
+        <a class="cr_h_0 fs_14" href="">管理控制台</a>
+    </div>
+
+    <!--头像-->
+    <div class="jzy_w_50 jzy_h_50 br_12 br_11_hove rt top-txt logo">
+        <img class="jzy_boy_18" src="public/images/touxiang.jpg" width="36" height="36">
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_270 jzy_h_408 br_h_0 top_nav">
+            <!--头像跟用户名-->
+            <div class="jzy_w_max jzy_h_50 lt" style="margin-top: 15px"><img class="jzy_boy_18" src="public/images/touxiang.jpg" width="36" height="36"></div>
+            <div class="jzy_w_max jzy_h_30 lt" style="line-height: 30px; border-bottom: 1px solid #e2e2e2">1731223728@qq.com</div>
+            <!--用户公共操作权限-->
+            <div class="jzy_w_250 jzy_h_250 lt" style="padding: 10px">
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/jbzl.png"></p>基本资料</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/smrz.png"></p>实名认证</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/aqsz.png"></p>安全设置</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/fxgk.png"></p>风险管控</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/fwkz.png"></p>访问控制</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/api.png"></p>API接口</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/hyqy.png"></p>会员权益</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/hyjf.png"></p>会员积分</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/wjgl.png"></p>文件管理</a>
+                </div>
+            </div>
+            <!--退出登录-->
+            <div class="jzy_w_max jzy_h_42 lt br_h_9" style="background: #f5f5f6; line-height: 45px"><a href="login.html">退出管理控制台</a></div>
+        </div>
+    </div>
+
+    <!--菜单2-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove rt top-txt">
+        <a class="cr_h_0 fs_14">语言选择</a>
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_90 br_h_0 top_nav nav2">
+            <p class="p"><a href="">简体中文</a></p>
+            <p class="p"><a href="">English</a></p>
+        </div>
+    </div>
+
+    <!--菜单3-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove rt top-txt">
+        <a class="cr_h_0 fs_14">权限设置</a>
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_90 br_h_0 top_nav nav2">
+            <p class="p"><a href="">新建权限</a></p>
+            <p class="p"><a href="">角色列表</a></p>
+            <p class="p"><a href="">部门管理</a></p>
+        </div>
+    </div>
+
+</div>
+
+<!--左侧主导航-->
+<div class="jzy_w_180 lt main_height main_left nav" style="background: #333744">
+
+    <div class="nav-top">
+        <div id="mini" style="background: #4a5064; text-align: center"><img src="public/images/icon/suofang.png" width="20"></div>
+    </div>
+    <ul>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>部门架构</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="region_list.html"><span>地区管理</span></a></li>
+                <li><a href="department_list.html"><span>部门管理</span></a></li>
+                <li><a href="job_list.html"><span>岗位管理</span></a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>权限设置</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="menu_list.html"><span>权限菜单</span></a></li>
+                <li><a href="manager_list.html"><span>管理员</span></a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>系统管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="javascript:;"><span>维护公告</span></a></li>
+                <li><a href="javascript:;"><span>版本管理</span></a></li>
+                <li><a href="javascript:;"><span>日志编码</span></a></li>
+                <li><a href="javascript:;"><span>数据库</span></a></li>
+                <li><a href="javascript:;"><span>服务器</span></a></li>
+                <li><a href="javascript:;"><span>敏感词设置</span></a></li>
+                <li><a href="javascript:;"><span>IP黑名单</span></a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>日志管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="javascript:;"><span>管理员登录日志</span></a></li>
+                <li><a href="javascript:;"><span>会员登录日志</span></a></li>
+                <li><a href="javascript:;"><span>后端操作日志</span></a></li>
+                <li><a href="javascript:;"><span>前端操作日志</span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--左侧次导航-->
+<div class="jzy_w_180 lt main_height main_nav" style="background: #D9DEE4">
+    <div class="jzy_w_150 jzy_h_70 fs_13 lt" style="font-weight: bold; line-height: 70px;padding-left: 30px">三级导航</div>
+    <div class="jzy_w_180 fs_13 lt main_height2" style="background: #EAEDF1;">
+        <div class="jzy_w_130 jzy_h_40 fs_12 lt" style="line-height: 40px;padding-left: 50px"><a href="region_add.html">新增地区</a></div>
+    </div>
+</div>
+
+<!--主内容框架-->
+<div class="main_height main_index lt" style="background: #f2f4f8;">
+    <div class="layui-btn-group demoTable jzy_w_max br_h_0 tabTop">
+        <span>地区列表</span>
+        <button class="layui-btn layui-btn-sm layui-btn-normal clickTab">打开功能面板</button>
+    </div>
+    <div class="tree_left" id="demo2"></div>
+    <table id="demo" lay-filter="demo"></table>
+</div>
+
+<!--多功能面板--> 
+<div id="divTab" class="divTab">
+    <!--固定头部-->
+    <div class="jzy_tab_top">
+        <img src="public/images/icon/gongneng.png" class="lt">
+        <div class="txt lt">功能面板</div>
+        <div class="on rt" id="onTab">×</div>
+    </div>
+    <!--功能列表-->
+    <div class="jzy_tab_main">
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;"><legend>功能列表</legend></fieldset>
+        <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="getCheckData">获取选中行数据</button>
+        <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="getCheckLength">获取选中数目</button>
+        <button class="layui-btn layui-btn-sm layui-btn-normal" data-type="isAll">验证是否全选</button>
+    </div>
+
+
+    <div class="jzy_tab_main">
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;"><legend>搜索条件</legend></fieldset>
+        <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">验证日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="date" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+            </div>
+            </div>
+        
+        <div class="layui-form-item">
+            <label class="layui-form-label">单行选择框</label>
+            <div class="layui-input-block">
+            <select name="interest" lay-filter="aihao">
+                <option value=""></option>
+                <option value="0">写作</option>
+                <option value="1" selected="">阅读</option>
+                <option value="2">游戏</option>
+                <option value="3">音乐</option>
+                <option value="4">旅行</option>
+            </select>
+            </div>
+        </div>
+        
+        
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">分组选择框</label>
+            <div class="layui-input-inline">
+                <select name="quiz">
+                <option value="">请选择问题</option>
+                <optgroup label="城市记忆">
+                    <option value="你工作的第一个城市">你工作的第一个城市</option>
+                </optgroup>
+                <optgroup label="学生时代">
+                    <option value="你的工号">你的工号</option>
+                    <option value="你最喜欢的老师">你最喜欢的老师</option>
+                </optgroup>
+                </select>
+            </div>
+            </div>
+        </div>
+        
+        <div class="layui-form-item">
+            <label class="layui-form-label">复选框</label>
+            <div class="layui-input-block">
+            <input type="checkbox" name="like[write]" title="写作">
+            <input type="checkbox" name="like[read]" title="阅读" checked="">
+            <input type="checkbox" name="like[game]" title="游戏">
+            </div>
+        </div>
+        
+        <div class="layui-form-item" pane="">
+            <label class="layui-form-label">原始复选框</label>
+            <div class="layui-input-block">
+            <input type="checkbox" name="like1[write]" lay-skin="primary" title="写作" checked="">
+            <input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+            <input type="checkbox" name="like1[game]" lay-skin="primary" title="游戏" disabled="">
+            </div>
+        </div>
+        
+        <div class="layui-form-item">
+            <label class="layui-form-label">开关</label>
+            <div class="layui-input-block">
+            <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">单选框</label>
+            <div class="layui-input-block">
+            <input type="radio" name="sex" value="男" title="男" checked="">
+            <input type="radio" name="sex" value="女" title="女">
+            <input type="radio" name="sex" value="禁" title="禁用" disabled="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+            <button class="layui-btn layui-btn-sm layui-btn-normal" lay-submit="" lay-filter="demo1">搜索</button>
+            </div>
+        </div>
+        </form>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="public/js/nav.js"></script>
+<!-- 这里的 checked 的状态只是演示 -->
+<script type="text/html" id="switchTpl">
+  <input type="checkbox" name="sex" value="{{d.status}}" lay-skin="switch" lay-text="开启|关闭" lay-filter="statusDemo" {{ d.status == 1 ? 'checked' : '' }}>
+</script>
+<!-- 这里的 操作 的html插入演示 -->
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+  <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">下属地区</a>
+</script>
+ 
+<script>
+layui.use(['form', 'table', 'laydate', 'tree'], function(){
+  var table = layui.table
+  ,form = layui.form
+  ,laydate = layui.laydate;
+
+  // 左侧菜单
+    layui.tree({
+        elem: '#demo2'
+        ,nodes: [{ //节点
+            name: '广东省'
+            ,children: [{
+            name: '子节点11'
+            },{
+            name: '子节点12'
+            }]
+        },{
+            name: '湖南省'
+            ,children: [{
+            name: '子节点21'
+            ,children: [{
+                name: '子节点211'
+            }]
+            }]
+        }] 
+        ,click: function(node){
+            console.log(node) //node即为当前点击的节点数据
+        }  
+    });
+  
+  //日期
+  laydate.render({
+    elem: '#date'
+  });
+
+  // 开启一个数据表格
+  table.render({
+    elem: '#demo'
+    ,url: '' //数据接口
+    ,page: true //开启分页
+    ,limit:10 //默认分页条数
+    ,height: 'full-200' //高度最大化
+    ,cols: [
+        [ //表头
+            {type:'checkbox'} // 开启多选框
+            ,{field: 'id', title: 'ID', width:80, sort: true}
+            ,{field: 'name', title: '地区名称', width:'48%', edit: 'text'}
+            ,{field: 'status', title: '状态', width:80, templet: '#switchTpl', unresize: true}
+            ,{field: 'sort', title: '排序', width:80, sort: true, edit: 'text'} 
+            ,{field: 'operation', title: '操作', width: 190, align:'center', toolbar: '#barDemo'}
+        ]
+    ]
+    // 默认数据
+    ,data: [
+        {"id": "10001","name": "广东省","status": "1","sort": "10"},
+        {"id": "10002","name": "湖南省","status": "2","sort": "12"},
+        {"id": "10003","name": "湖北省","status": "2","sort": "13"},
+        {"id": "10004","name": "广西省","status": "2","sort": "14"},
+        {"id": "10005","name": "河南省","status": "2","sort": "15"},
+        {"id": "10006","name": "河北省","status": "2","sort": "14"},
+        {"id": "10007","name": "浙江省","status": "2","sort": "14"},
+        {"id": "10008","name": "安徽省","status": "2","sort": "14"},
+        {"id": "10009","name": "福建省","status": "2","sort": "14"},
+        {"id": "10010","name": "甘肃省","status": "2","sort": "14"},
+        {"id": "10011","name": "贵州省","status": "2","sort": "14"},
+    ]
+  });
+
+  // 监听数据表格中的单元格编辑
+  table.on('edit(demo)', function(obj){
+    var value = obj.value //得到修改后的值
+    ,data = obj.data //得到所在行所有键值
+    ,field = obj.field; //得到字段
+    layer.msg('[ID: '+ data.id +'] ' + field + ' 字段更改为：'+ value);
+  });
+
+  // 监听状态操作
+  form.on('switch(statusDemo)', function(obj){
+    layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+  });
+
+
+  var $ = layui.$, active = {
+    getCheckData: function(){ //获取选中数据
+      var checkStatus = table.checkStatus('demo')
+      ,data = checkStatus.data;
+      layer.alert(JSON.stringify(data));
+    }
+    ,getCheckLength: function(){ //获取选中数目
+      var checkStatus = table.checkStatus('demo')
+      ,data = checkStatus.data;
+      layer.msg('选中了：'+ data.length + ' 个');
+    }
+    ,isAll: function(){ //验证是否全选
+      var checkStatus = table.checkStatus('demo');
+      layer.msg(checkStatus.isAll ? '全选': '未全选')
+    }
+  };
+  $('.jzy_tab_main .layui-btn').on('click', function(){
+    var type = $(this).data('type');
+    active[type] ? active[type].call(this) : '';
+  });
+
+});
+
+
+  
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>极资源-权限管理-仿阿里云后台模板(2018)</title>
+    <link rel="stylesheet" type="text/css" href="public/layui/css/layui.css">
+    <link href="public/css/common.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/nav.css">
+    <link rel="stylesheet" type="text/css" href="public/css/iconfont.css">
+    <script src="public/js/jquery-3.2.1.min.js"></script>
+    <script src="public/layui/layui.js"></script>
+    <script src="public/js/alert.js"></script>
+	<script src="public/js/echarts.min.js"></script>
+</head>
+
+<body>
+<!-- 头部导航 -->
+<div class="jzy_w_max jzy_h_50 br_12">
+    <!-- LOGO -->
+    <div class="jzy_w_50 jzy_h_50 br_12 br_11_hove lt logo">
+        <a href=""><img src="public/images/aliyun.png"></a>
+    </div>
+    <!--菜单1-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove lt top-txt">
+        <a class="cr_h_0 fs_14" href="">管理控制台</a>
+    </div>
+
+    <!--头像-->
+    <div class="jzy_w_50 jzy_h_50 br_12 br_11_hove rt top-txt logo">
+        <img class="jzy_boy_18" src="public/images/touxiang.jpg" width="36" height="36">
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_270 jzy_h_408 br_h_0 top_nav">
+            <!--头像跟用户名-->
+            <div class="jzy_w_max jzy_h_50 lt" style="margin-top: 15px"><img class="jzy_boy_18" src="public/images/touxiang.jpg" width="36" height="36"></div>
+            <div class="jzy_w_max jzy_h_30 lt" style="line-height: 30px; border-bottom: 1px solid #e2e2e2">1731223728@qq.com</div>
+            <!--用户公共操作权限-->
+            <div class="jzy_w_250 jzy_h_250 lt" style="padding: 10px">
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/jbzl.png"></p>基本资料</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/smrz.png"></p>实名认证</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/aqsz.png"></p>安全设置</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/fxgk.png"></p>风险管控</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/fwkz.png"></p>访问控制</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/api.png"></p>API接口</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/hyqy.png"></p>会员权益</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/hyjf.png"></p>会员积分</a>
+                </div>
+
+                <div class="jzy_w_80 jzy_h_80 lt br_h_2_hove">
+                    <a><p class="jzy_h_30"><img src="public/images/icon/wjgl.png"></p>文件管理</a>
+                </div>
+            </div>
+            <!--退出登录-->
+            <div class="jzy_w_max jzy_h_42 lt br_h_9" style="background: #f5f5f6; line-height: 45px"><a href="login.html">退出管理控制台</a></div>
+        </div>
+    </div>
+
+    <!--菜单2-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove rt top-txt">
+        <a class="cr_h_0 fs_14">语言选择</a>
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_90 br_h_0 top_nav nav2">
+            <p class="p"><a href="">简体中文</a></p>
+            <p class="p"><a href="">English</a></p>
+        </div>
+    </div>
+
+    <!--菜单3-->
+    <div class="jzy_w_90 jzy_h_50 br_12 br_11_hove rt top-txt">
+        <a class="cr_h_0 fs_14">权限设置</a>
+        <!-- 头像下拉菜单 -->
+        <div class="jzy_w_90 br_h_0 top_nav nav2">
+            <p class="p"><a href="">新建权限</a></p>
+            <p class="p"><a href="">角色列表</a></p>
+            <p class="p"><a href="">部门管理</a></p>
+        </div>
+    </div>
+
+</div>
+
+<!--左侧主导航-->
+<div class="jzy_w_180 lt main_height main_left nav" style="background: #333744">
+
+    <div class="nav-top">
+        <div id="mini" style="background: #4a5064; text-align: center"><img src="public/images/icon/suofang.png" width="20"></div>
+    </div>
+    <ul>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>部门架构</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="region_list.html"><span>地区管理</span></a></li>
+                <li><a href="department_list.html"><span>部门管理</span></a></li>
+                <li><a href="job_list.html"><span>岗位管理</span></a></li>
+            </ul>
+        </li>
+        
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>权限设置</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="menu_list.html"><span>权限菜单</span></a></li>
+                <li><a href="manager_list.html"><span>管理员</span></a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>系统管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="javascript:;"><span>维护公告</span></a></li>
+                <li><a href="javascript:;"><span>版本管理</span></a></li>
+                <li><a href="javascript:;"><span>日志编码</span></a></li>
+                <li><a href="javascript:;"><span>数据库</span></a></li>
+                <li><a href="javascript:;"><span>服务器</span></a></li>
+                <li><a href="javascript:;"><span>敏感词设置</span></a></li>
+                <li><a href="javascript:;"><span>IP黑名单</span></a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>日志管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+                <li><a href="javascript:;"><span>管理员登录日志</span></a></li>
+                <li><a href="javascript:;"><span>会员登录日志</span></a></li>
+                <li><a href="javascript:;"><span>后端操作日志</span></a></li>
+                <li><a href="javascript:;"><span>前端操作日志</span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--左侧次导航-->
+<div class="jzy_w_180 lt main_height main_nav" style="background: #D9DEE4">
+    <div class="jzy_w_150 jzy_h_70 fs_13 lt" style="font-weight: bold; line-height: 70px;padding-left: 30px">三级导航</div>
+    <div class="jzy_w_180 fs_13 lt main_height2" style="background: #EAEDF1;">
+        <div class="jzy_w_130 jzy_h_40 fs_12 lt" style="line-height: 40px;padding-left: 50px"><a href="menu_add.html">新增权限</a></div>
+    </div>
+</div>
+
+<!--主内容框架-->
+<div class="main_height main_index lt" style="background: #f2f4f8;">
+    <div class="layui-btn-group demoTable jzy_w_max br_h_0 tabTop">
+        <span>权限列表</span>
+    </div>
+    <div class="tree_left" id="demo2"></div>
+    <table id="demo" lay-filter="demo"></table>
+</div>
+
+
+<script type="text/javascript" src="public/js/nav.js"></script>
+<!-- 这里的 checked 的状态只是演示 -->
+<script type="text/html" id="switchTpl">
+  <input type="checkbox" name="sex" value="{{d.status}}" lay-skin="switch" lay-text="启用|禁用" lay-filter="statusDemo" {{ d.status == 1 ? 'checked' : '' }}>
+</script>
+<!-- 这里的 type 的前端内容转换 -->
+<script type="text/html" id="typeTpl">
+  {{#  if(d.type === ''){ }}
+    不限
+  {{#  } else { }}
+    {{ d.type }}
+  {{#  } }}
+</script>
+<!-- 这里的 display 的前端内容转换 -->
+<script type="text/html" id="displayTpl">
+  {{#  if(d.display === '2'){ }}
+    隐藏
+  {{#  } else { }}
+    显示
+  {{#  } }}
+</script>
+<!-- 这里的 public 的前端内容转换 -->
+<script type="text/html" id="publicTpl">
+  {{#  if(d.public === '2'){ }}
+    公共
+  {{#  } else { }}
+    认证
+  {{#  } }}
+</script>
+<!-- 这里的 操作 的html插入演示 -->
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">新增</a>
+  <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
+ 
+<script>
+layui.use(['form', 'table', 'laydate', 'tree'], function(){
+  var table = layui.table
+  ,form = layui.form
+  ,laydate = layui.laydate;
+
+  // 左侧菜单
+    layui.tree({
+        elem: '#demo2'
+        ,nodes: [{"checkboxValue":"1","name":"系统管理","checked":true,"spread":true,"children":[{"checkboxValue":"2","name":"组织架构设置","checked":true,"spread":true,"children":[{"checkboxValue":"8","name":"部门设置","checked":true,"spread":true,"children":[{"checkboxValue":"9","name":"新建部门","checked":true,"spread":true,"children":[]},{"checkboxValue":"10","name":"修改部门","checked":true,"spread":true,"children":[]},{"checkboxValue":"11","name":"删除部门","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"13","name":"岗位设置","checked":true,"spread":true,"children":[{"checkboxValue":"14","name":"新建岗位","checked":true,"spread":true,"children":[]},{"checkboxValue":"15","name":"修改岗位","checked":true,"spread":true,"children":[]},{"checkboxValue":"16","name":"删除岗位","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"18","name":"职级设置","checked":true,"spread":true,"children":[{"checkboxValue":"19","name":"新建职级","checked":true,"spread":true,"children":[]},{"checkboxValue":"20","name":"修改职级","checked":true,"spread":true,"children":[]},{"checkboxValue":"21","name":"删除职级","checked":true,"spread":true,"children":[]}]}]},{"checkboxValue":"23","name":"权限设置","checked":true,"spread":true,"children":[{"checkboxValue":"24","name":"角色管理","checked":true,"spread":true,"children":[{"checkboxValue":"25","name":"新建角色","checked":true,"spread":true,"children":[]},{"checkboxValue":"26","name":"修改角色","checked":true,"spread":true,"children":[]},{"checkboxValue":"27","name":"删除角色","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"28","name":"权限管理","checked":true,"spread":true,"children":[{"checkboxValue":"29","name":"新增权限","checked":true,"spread":true,"children":[]},{"checkboxValue":"30","name":"修改权限","checked":true,"spread":true,"children":[]},{"checkboxValue":"31","name":"删除权限","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"33","name":"管理员管理","checked":true,"spread":true,"children":[{"checkboxValue":"34","name":"新增管理员","checked":true,"spread":true,"children":[]},{"checkboxValue":"35","name":"修改管理员","checked":true,"spread":true,"children":[]},{"checkboxValue":"36","name":"删除管理员","checked":true,"spread":true,"children":[]},{"checkboxValue":"37","name":"预览详情","checked":true,"spread":true,"children":[]}]}]},{"checkboxValue":"38","name":"系统设置","checked":true,"spread":true,"children":[{"checkboxValue":"39","name":"版本管理","checked":true,"spread":true,"children":[{"checkboxValue":"40","name":"新建版本","checked":true,"spread":true,"children":[]},{"checkboxValue":"41","name":"修改版本","checked":true,"spread":true,"children":[]},{"checkboxValue":"42","name":"删除版本","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"43","name":"日志编码设置","checked":true,"spread":true,"children":[{"checkboxValue":"44","name":"新增编码","checked":true,"spread":true,"children":[]},{"checkboxValue":"45","name":"修改编码","checked":true,"spread":true,"children":[]},{"checkboxValue":"46","name":"删除编码","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"67","name":"维护公告设置","checked":true,"spread":true,"children":[{"checkboxValue":"68","name":"修改公告内容","checked":true,"spread":true,"children":[]}]}]},{"checkboxValue":"47","name":"日志管理","checked":true,"spread":true,"children":[{"checkboxValue":"48","name":"管理员登录日志","checked":true,"spread":true,"children":[{"checkboxValue":"49","name":"删除日志","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"50","name":"后台操作日志","checked":true,"spread":true,"children":[{"checkboxValue":"51","name":"删除日志","checked":true,"spread":true,"children":[]},{"checkboxValue":"52","name":"清空日志","checked":true,"spread":true,"children":[]},{"checkboxValue":"53","name":"预览详情","checked":true,"spread":true,"children":[]}]}]},{"checkboxValue":"54","name":"服务器 - 数据库","checked":true,"spread":true,"children":[{"checkboxValue":"55","name":"数据表","checked":true,"spread":true,"children":[{"checkboxValue":"57","name":"预览详情","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"56","name":"服务器信息","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"58","name":"安全设置","checked":true,"spread":true,"children":[{"checkboxValue":"59","name":"敏感词管理","checked":true,"spread":true,"children":[{"checkboxValue":"60","name":"修改敏感词内容","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"61","name":"IP黑名单管理","checked":true,"spread":true,"children":[{"checkboxValue":"62","name":"封禁IP","checked":true,"spread":true,"children":[]},{"checkboxValue":"63","name":"修改封禁","checked":true,"spread":true,"children":[]},{"checkboxValue":"64","name":"删除封禁","checked":true,"spread":true,"children":[]}]}]},{"checkboxValue":"65","name":"文档管理","checked":true,"spread":true,"children":[{"checkboxValue":"66","name":"后端 - 后台开发文档","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"69","name":"车险配置管理","checked":true,"spread":true,"children":[{"checkboxValue":"70","name":"车险渠道配置","checked":true,"spread":true,"children":[{"checkboxValue":"71","name":"新增配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"72","name":"修改配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"73","name":"删除配置","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"75","name":"第三方支付配置","checked":true,"spread":true,"children":[{"checkboxValue":"76","name":"新增配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"77","name":"修改配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"78","name":"删除配置","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"79","name":"车型查询配置","checked":true,"spread":true,"children":[{"checkboxValue":"80","name":"新增配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"81","name":"修改配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"82","name":"删除配置","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"83","name":"车险状态码配置","checked":true,"spread":true,"children":[{"checkboxValue":"84","name":"新增配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"85","name":"修改配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"86","name":"删除配置","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"87","name":"短信内容配置","checked":true,"spread":true,"children":[{"checkboxValue":"88","name":"新增短信内容配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"89","name":"修改短信内容配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"90","name":"删除短信内容配置","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"92","name":"险种配置","checked":true,"spread":true,"children":[{"checkboxValue":"93","name":"新增配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"94","name":"修改配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"95","name":"删除配置","checked":true,"spread":true,"children":[]}]},{"checkboxValue":"96","name":"车型配置","checked":true,"spread":true,"children":[{"checkboxValue":"97","name":"新增车型配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"98","name":"修改车型配置","checked":true,"spread":true,"children":[]},{"checkboxValue":"99","name":"删除车型配置","checked":true,"spread":true}]}]}]}] 
+        ,click: function(node){
+            console.log(node) //node即为当前点击的节点数据
+        }  
+    });
+  
+  
+  // 开启一个数据表格
+  table.render({
+    elem: '#demo'
+    ,url: '' //数据接口
+    ,page: true //开启分页
+    ,limit:10 //默认分页条数
+    ,height: 'full-200' //高度最大化
+    ,cols: [
+        [ //表头
+            {type:'checkbox'} // 开启多选框
+            ,{field: 'id', title: 'ID', width:80, sort: true}
+            ,{field: 'name', title: '权限名称', width:250, edit: 'text'}
+            ,{field: 'staffs', title: '路由地址', width:250} 
+            ,{field: 'type', title: '请求类型', width:120, templet: '#typeTpl'} 
+            ,{field: 'display', title: '菜单', width:60, templet: '#displayTpl'} 
+            ,{field: 'public', title: '权限', width:60, templet: '#publicTpl'}
+            ,{field: 'status', title: '状态', width:80, templet: '#switchTpl', unresize: true}
+            ,{field: 'sort', title: '排序', width:80, sort: true, edit: 'text'} 
+            ,{field: 'operation', title: '操作', width: 190, align:'center', toolbar: '#barDemo'}
+        ]
+    ]
+    // 默认数据
+    ,data: [
+        {"id": "10001","name": "新建部门","staffs":"admin/index/index","type":"","display":"2","public":"1","status": "1","sort": "10"},
+        {"id": "10002","name": "修改部门","staffs":"admin/index/upd","type":"POST,GET","display":"2","public":"2","status": "1","sort": "10"},
+        {"id": "10003","name": "删除部门","staffs":"admin/index/del","type":"POST","display":"1","public":"1","status": "2","sort": "10"},
+    ]
+  });
+
+  // 监听数据表格中的单元格编辑
+  table.on('edit(demo)', function(obj){
+    var value = obj.value //得到修改后的值
+    ,data = obj.data //得到所在行所有键值
+    ,field = obj.field; //得到字段
+    layer.msg('[ID: '+ data.id +'] ' + field + ' 字段更改为：'+ value);
+  });
+
+  // 监听状态操作
+  form.on('switch(statusDemo)', function(obj){
+    layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+  });
+
+});
+
+
+  
+</script>
+
+
+</body>
+</html>
